@@ -68,10 +68,10 @@ int Check(int line, int list)
             return 0;
         }
     }
-    //如果以上情况都不是，当前位置就可以放皇后
+    //如果以上都不是，当前位置就可以放
     return 1;
 }
-//输出语句
+//打印结果
 void print()
 {
     for (int line = 0; line < 8; line++)
@@ -86,7 +86,7 @@ void print()
         }
         printf("\n");
     }
-    printf("================\n");
+    printf("+——+——+——+——+——+——+\n");
 }
 void eight_queen(int line)
 {
@@ -118,9 +118,9 @@ void eight_queen(int line)
 }
 int main()
 {
-    //调用回溯函数，参数0表示从棋盘的第一行开始判断
+    //调用回溯函数，参数0表示从第一行开始演算
     eight_queen(0);
-    printf("摆放的方式有%d种", Counts);
+    printf("摆放方式有%d种", Counts);
     return 0;
 }
 ```
